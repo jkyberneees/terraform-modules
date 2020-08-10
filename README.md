@@ -66,7 +66,7 @@ The `terraform.tfvars.json` file:
     "target_group_hcheck_path": "/api/health/status"
 }
 ```
-
+> Container image will look like: `{ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/myns/myapp:1.0.1`
 
 ## TODOs
 - [ ] Add modules documentation
