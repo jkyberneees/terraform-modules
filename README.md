@@ -7,7 +7,7 @@ Generic Terraform Modules
 By running this example you will be creating the following resources:
 - A VPC with 3 public subnets. 
 - An Application Load Balancer with 2 target groups for blue/green deployments. 
-- An ECR repository, ECS Fargate cluster and correspondent service and task definitions. 
+- An ECR repository, ECS Fargate cluster with service and task definitions. 
 
 > Ultimatelly, your docker based application is deployed and accessible under the ALB public DNS address. Created resources are properly tagged, and proper security policies are applied using Security Groups.  
 
