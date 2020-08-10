@@ -1,11 +1,3 @@
-# terraform-modules
-Generic Terraform Modules
-
-> `vpc`, `ecs` and `lb` modules were inspired by https://snow-dev.com/posts/ecs-cd-with-codepipeline-in-terraform.html
-
-## Full example
-
-```terraform
 provider "aws" {
   region  = var.region
   version = "3.0.0"
@@ -42,24 +34,3 @@ module "ecs" {
   alb_sg_id            = module.alb.alb_sg_id
   alb_target_group_arn = module.alb.alb_target_group_arn
 }
-```
-
-The `terraform.tfvars.json` file:
-```json
-{
-    "region": "us-east-1",
-    "app_name": "myapp",
-    "namespace": "myns",
-    "container_port": 8080,
-    "container_image_tag": "1.0.1",
-    "ecs_desired_tasks_count": 1,
-    "ecs_task_memory": "512",
-    "ecs_task_cpu": "256",
-    "alb_internal": false,
-    "target_group_hcheck_path": "/api/health/status"
-}
-```
-
-
-## TODOs
-- [ ] Add modules documentation
